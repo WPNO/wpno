@@ -8,7 +8,7 @@
 // Include the Composer autoloader.
 require __DIR__ . '/vendor/autoload.php';
 
-$dotenv = new Dotenv\Dotenv( dirname( __DIR__ ) ); // load the .env file from parent dir.
+$dotenv = Dotenv\Dotenv::create( dirname( __DIR__ ) ); // load the .env file from parent dir.
 $dotenv->load();
 
 define( 'DB_NAME', getenv( 'DB_NAME' ) );
