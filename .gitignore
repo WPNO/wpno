@@ -1,0 +1,9 @@
+vendor
+content/plugins
+content/themes
+content/uploads
+content/languages
+wp
+.idea
+debug.log
+auth.json
