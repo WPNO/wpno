@@ -1,0 +1,37 @@
+{
+    "name": "wpno/wpno",
+    "description": "The WPNO website",
+    "type": "project",
+    "license": "GPLv3",
+    "repositories": {
+        "wpackagist": {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    },
+    "require": {
+        "composer/installers": "*",
+        "johnpbloch/wordpress": "*",
+        "bjornjohansen/wplang": "*",
+        "vlucas/phpdotenv": "*"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "wordpress-languages": [ "nb_NO" ],
+        "wordpress-language-dir": "content/languages"
+    },
+    "require-dev": {
+        "bjornjohansen/wp-pre-commit-hook": "*"
+    }
+}
